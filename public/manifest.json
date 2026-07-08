@@ -1,0 +1,30 @@
+{
+  "name": "Hoco Romania - Accesorii Premium",
+  "short_name": "Hoco Romania",
+  "description": "Magazin oficial de accesorii mobile premium - Power Banks, C\u0103\u0219ti, \u00cenc\u0103rc\u0103toare",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#DC2626",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "shopping",
+    "lifestyle"
+  ],
+  "lang": "ro-RO",
+  "dir": "ltr"
+}
