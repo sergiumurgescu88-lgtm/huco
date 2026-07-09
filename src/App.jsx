@@ -1,4 +1,5 @@
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTopButton from "./components/ui/BackToTopButton";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
