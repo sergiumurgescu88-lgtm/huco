@@ -66,7 +66,7 @@ const PremiumGoldBadge = () => (
     className="relative inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-full font-bold shadow-lg"
   >
     <Crown className="w-5 h-5" fill="currentColor" />
-    <span className="text-sm tracking-wider">PREMIUM GOLD</span>
+    <span className="text-sm tracking-wider">Hoco. Official</span>
     <Diamond className="w-4 h-4" fill="currentColor" />
     
     {/* Shimmer Effect */}
@@ -117,25 +117,39 @@ const HeroSlider = ({ products }) => {
 
   const slides = [
     {
-      product: products[0],
-      title: "POWERFUL PERFORMANCE",
-      subtitle: "Premium Power Banks",
-      description: "Fast charging technology with wireless support. Keep your devices powered all day long.",
-      specs: ["20000mAh Capacity", "PD 20W Fast Charge", "Wireless 15W", "LED Display"]
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/04/hoco-hx614-spray-series-ice-cooling-handheld-fan.avif&output=jpg' }], price: 10000, regular_price: 10000 },
+      title: "PORTABIL",
+      subtitle: "Cooling Solution",
+      description: "Portable fan with humidifier for ultimate comfort.",
+      specs: ["USB Powered", "3 Speeds", "Clip-On", "Quiet"]
     },
     {
-      product: products[1],
-      title: "CRYSTAL CLEAR AUDIO",
-      subtitle: "Wireless Earbuds",
-      description: "Experience premium sound quality with active noise cancellation and long battery life.",
-      specs: ["ANC Technology", "30H Battery", "Hi-Fi Sound", "IPX5 Waterproof"]
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/03/hoco-gt3-idol-multifunctional-magnetic-card-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
+      title: "MAGNETIC",
+      subtitle: "Car Accessory",
+      description: "Magnetic card holder with phone stand functionality.",
+      specs: ["Strong Magnet", "360\u00b0 Rotation", "Leather", "Universal"]
     },
     {
-      product: products[2],
-      title: "SMART CHARGING",
-      subtitle: "Wall Chargers",
-      description: "Multi-port fast chargers for all your devices. Compact and travel-friendly design.",
-      specs: ["GaN Technology", "65W Output", "4 Ports", "Universal Compatibility"]
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/02/hoco-hi37-wifi4-usb-external-wireless-network-card.avif&output=jpg' }], price: 10000, regular_price: 10000 },
+      title: "WI-FI",
+      subtitle: "Premium Gadget",
+      description: "Innovative accessory for modern lifestyle.",
+      specs: ["Premium", "Durable", "Modern", "Easy Use"]
+    },
+    {
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/01/hoco-hw36-magnetic-wireless-charging-car-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
+      title: "MAȘINĂ",
+      subtitle: "Fast Charging",
+      description: "High-speed wireless charger for all your devices.",
+      specs: ["15W Fast", "Qi Compatible", "LED Display", "Multi-Device"]
+    },
+    {
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2025/09/hoco-ea9-clear-sound-clip-on-tws-bt-headset-mp.jpg&output=jpg' }], price: 10000, regular_price: 10000 },
+      title: "TWS",
+      subtitle: "Wireless Audio",
+      description: "Premium wireless earbuds with crystal clear sound quality.",
+      specs: ["Bluetooth 5.3", "30H Battery", "Hi-Fi Sound", "IPX5"]
     }
   ];
 
@@ -145,8 +159,7 @@ const HeroSlider = ({ products }) => {
     }, 6000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
-  // Touch handlers pentru swipe
+  // Touch handlers pentru swipe - doar orizontal, permite scroll vertical
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -158,21 +171,25 @@ const HeroSlider = ({ products }) => {
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     
+    // Doar swipe orizontal (nu vertical)
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
-    
+
     if (isLeftSwipe) {
-      // Swipe left - next slide
       setCurrentSlide(prev => (prev + 1) % slides.length);
     } else if (isRightSwipe) {
-      // Swipe right - previous slide
       setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
     }
+    
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
+
   return (
-<section className="relative h-[85vh] overflow-hidden bg-black carousel-container"
+    <section 
+        className="relative h-auto md:h-[90vh] overflow-visible bg-black carousel-container"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -186,10 +203,10 @@ const HeroSlider = ({ products }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0"
+              className="relative md:absolute inset-0 bg-black md:bg-transparent"
             >
               {/* Background Image - Alb/Negru */}
-              <div className="absolute inset-0">
+              <div className="hidden md:block absolute inset-0">
                 <img 
                   src={slide.product?.images?.[0]?.src || '/placeholder.jpg'}
                   alt=""
@@ -200,53 +217,66 @@ const HeroSlider = ({ products }) => {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+              <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 min-h-[85vh] md:min-h-0 md:h-full flex flex-col md:flex-row items-center">
+                <div className="w-full space-y-6 md:space-y-0 md:grid md:grid-cols-1 lg:grid-cols-2 lg:gap-12 lg:items-center">
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
-                    className="text-white space-y-6"
+                    className="text-white space-y-4 md:space-y-6 w-full"
                   >
                     {/* Premium Gold Badge */}
                     <PremiumGoldBadge />
 
-                    <p className="text-red-500 font-semibold text-lg tracking-wider">{slide.subtitle}</p>
-                    <h1 className="text-5xl md:text-7xl font-black leading-tight">{slide.title}</h1>
-                    <p className="text-xl text-gray-300 max-w-xl">{slide.description}</p>
+                    <p className="text-red-500 font-semibold text-sm sm:text-base md:text-lg tracking-wider">{slide.subtitle}</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light leading-tight tracking-wide">{slide.title}</h1>
+                    <p className="text-sm sm:text-base md:text-xl text-gray-300 max-w-xl">{slide.description}</p>
                     
                     {/* Specs - Alb/Negru */}
-                    <div className="grid grid-cols-2 gap-4 pt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 pt-4">
                       {slide.specs.map((spec, sIdx) => (
                         <div key={sIdx} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-3 rounded-lg">
-                          <Zap className="text-red-500" size={20} />
-                          <span className="font-semibold text-white">{spec}</span>
+                          <Zap className="text-red-500 flex-shrink-0" size={18} />
+                          <span className="font-semibold text-white text-xs sm:text-sm">{spec}</span>
                         </div>
                       ))}
                     </div>
 
                     <Link 
                       to="/category/Toate Produsele"
-                      className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-full font-bold text-lg mt-6 transition-all hover:scale-105 shadow-2xl shadow-red-600/50"
+                      className="inline-flex items-center gap-2 sm:gap-3 bg-red-600 hover:bg-red-700 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg mt-4 sm:mt-6 transition-all hover:scale-105 shadow-2xl shadow-red-600/50"
                     >
                       SHOP NOW <ArrowRight size={24} />
                     </Link>
                   </motion.div>
 
-                  {/* Product Image */}
+                  {/* Product Image cu chenar premium gold */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="hidden lg:block"
+                    className="w-full flex items-center justify-center mt-4 lg:mt-0 lg:col-start-2"
                   >
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 to-transparent rounded-full blur-3xl"></div>
-                      <img 
-                        src={slide.product?.images?.[0]?.src || '/placeholder.jpg'}
-                        alt={slide.title}
-                        className="relative w-full h-[500px] object-contain drop-shadow-2xl"
-                      />
+                    <div className="relative p-4 md:p-8">
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 via-yellow-500/20 to-yellow-600/30 rounded-full blur-3xl scale-110"></div>
+                      
+                      {/* Chenar premium gold */}
+                      <div className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 p-1 rounded-3xl shadow-2xl shadow-yellow-500/50">
+                        <div className="bg-black/90 backdrop-blur-sm rounded-3xl p-4 md:p-6">
+                          <img
+                            src={slide.product?.images?.[0]?.src || '/placeholder.jpg'}
+                            alt={slide.title}
+                            className="w-full h-[250px] md:h-[400px] lg:h-[500px] object-contain drop-shadow-[0_10px_30px_rgba(255,215,0,0.4)]"
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* Corner accents */}
+                      <div className="absolute -top-1 -left-1 w-6 h-6 md:w-8 md:h-8 border-t-4 border-l-4 border-yellow-400 rounded-tl-2xl"></div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 md:w-8 md:h-8 border-t-4 border-r-4 border-yellow-400 rounded-tr-2xl"></div>
+                      <div className="absolute -bottom-1 -left-1 w-6 h-6 md:w-8 md:h-8 border-b-4 border-l-4 border-yellow-400 rounded-bl-2xl"></div>
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 md:w-8 md:h-8 border-b-4 border-r-4 border-yellow-400 rounded-br-2xl"></div>
                     </div>
                   </motion.div>
                 </div>
@@ -435,7 +465,7 @@ export default function HomePage() {
 
       {/* ========== POWER BANKS SECTION ========== */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="hidden md:block absolute inset-0">
           <img 
             src={powerBanks[0]?.images?.[0]?.src || '/placeholder.jpg'}
             alt=""
@@ -498,7 +528,7 @@ export default function HomePage() {
 
       {/* ========== AUDIO SECTION ========== */}
       <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="hidden md:block absolute inset-0">
           <img 
             src={audioProducts[0]?.images?.[0]?.src || '/placeholder.jpg'}
             alt=""

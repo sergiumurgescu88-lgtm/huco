@@ -5,6 +5,7 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #f9fafb;
     color: #111827;
+    overflow-x: hidden;
   }
 }
 
@@ -24,7 +25,15 @@
   background: #94a3b8;
 }
 
-/* Prevent horizontal scroll */
-html, body {
-  overflow-x: hidden;
+/* Carousel - permite scroll vertical */
+.carousel-container {
+  touch-action: pan-y;
+  overflow: visible;
+}
+
+/* Pe desktop păstrăm fixed height */
+@media (min-width: 768px) {
+  .carousel-container {
+    overflow: hidden;
+  }
 }
