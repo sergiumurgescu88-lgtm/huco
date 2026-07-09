@@ -379,8 +379,8 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <PremiumGoldBadge />
-            <h2 className="text-5xl font-black text-gray-900 mb-4 mt-6">SHOP BY CATEGORY</h2>
-            <p className="text-gray-600 text-xl">Discover our premium collection</p>
+            <h2 className="text-5xl font-black text-gray-900 mb-4 mt-6">CUMPĂRĂ PE CATEGORII</h2>
+            <p className="text-gray-600 text-xl">Descoperă colecția noastră premium</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -425,7 +425,7 @@ export default function HomePage() {
             <div>
               <PremiumGoldBadge />
               <h2 className="text-5xl font-black mb-2 mt-6">PRODUSE NOI</h2>
-              <p className="text-gray-400 text-xl">Latest products from Hoco</p>
+              <p className="text-gray-400 text-xl">Cele mai noi produse de la Hoco</p>
             </div>
             <Link to="/category/Toate Produsele" className="hidden md:flex items-center gap-2 text-red-500 font-bold text-lg hover:underline">
               VIEW ALL <ArrowRight size={24} />
@@ -463,7 +463,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========== POWER BANKS SECTION ========== */}
+      {/* ========== BATERII EXTERNE SECTION ========== */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="hidden md:block absolute inset-0">
           <img 
@@ -478,15 +478,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <PremiumGoldBadge />
-              <h2 className="text-5xl font-black text-gray-900 mb-6 mt-6">POWER BANKS</h2>
-              <p className="text-gray-600 text-xl mb-8">Keep your devices charged anywhere, anytime. Premium capacity with fast charging technology.</p>
+              <h2 className="text-5xl font-black text-gray-900 mb-6 mt-6">BATERII EXTERNE</h2>
+              <p className="text-gray-600 text-xl mb-8">Menține dispozitivele încărcate oriunde și oricând. Capacitate premium cu tehnologie de încărcare rapidă.</p>
               
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { icon: Battery, text: "Up to 30000mAh" },
+                  { icon: Battery, text: "Până la 30000mAh" },
                   { icon: Zap, text: "Încărcare Rapidă PD 20W" },
-                  { icon: Shield, text: "Safety Protection" },
-                  { icon: Clock, text: "Long Battery Life" }
+                  { icon: Shield, text: "Protecție Siguranță" },
+                  { icon: Clock, text: "Durată Lungă Baterie" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 bg-gray-50 border-2 border-gray-200 hover:border-red-600 p-4 rounded-xl transition-colors">
                     <item.icon className="text-red-600" size={24} />
@@ -573,8 +573,8 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-900 mb-4">WHY CHOOSE HOCO</h2>
-            <p className="text-gray-600 text-xl">Premium quality you can trust</p>
+            <h2 className="text-5xl font-black text-gray-900 mb-4">DE CE SĂ ALEGI HOCO</h2>
+            <p className="text-gray-600 text-xl">Calitate premium în care poți avea încredere</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -603,13 +603,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========== BEST SELLERS ========== */}
+      {/* ========== CELE MAI VÂNDUTE ========== */}
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <PremiumGoldBadge />
-            <h2 className="text-5xl font-black mb-4 mt-6">BEST SELLERS</h2>
-            <p className="text-gray-400 text-xl">Most popular products this month</p>
+            <h2 className="text-5xl font-black mb-4 mt-6">CELE MAI VÂNDUTE</h2>
+            <p className="text-gray-400 text-xl">Cele mai populare produse din această lună</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
