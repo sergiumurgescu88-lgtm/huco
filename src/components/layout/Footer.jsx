@@ -14,8 +14,8 @@ export default function Footer() {
               Distribuitor autorizat Hoco în România. Oferim accesorii premium pentru dispozitive mobile, audio și smart home. Calitate garantată și livrare rapidă.
             </p>
             <div className="flex gap-4 text-sm">
-              <a href="#" className="hover:text-white transition flex items-center gap-1"><Globe size={16} /> Website</a>
-              <a href="#" className="hover:text-white transition flex items-center gap-1"><Info size={16} /> Social</a>
+              <a href="#" className="hover:text-white transition flex items-center gap-1"><Globe size={16} /> Site Web</a>
+              <a href="#" className="hover:text-white transition flex items-center gap-1"><Info size={16} /> Rețele Sociale</a>
             </div>
           </div>
 

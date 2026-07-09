@@ -32,7 +32,7 @@ export default function ProductDetails() {
 
   const specs = [
     { label: "Brand", value: "Hoco" },
-    { label: "Model", value: product.name.split(' ')[0] || "N/A" },
+    { label: "Model", value: product.name.split(' ')[0] || "Nespecificat" },
     { label: "Garanție", value: "24 Luni" },
     { label: "Stoc", value: "Disponibil" },
     { label: "SKU", value: `HOCO-${product.slug}` }

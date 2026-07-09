@@ -119,37 +119,37 @@ const HeroSlider = ({ products }) => {
     {
       product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/04/hoco-hx614-spray-series-ice-cooling-handheld-fan.avif&output=jpg' }], price: 10000, regular_price: 10000 },
       title: "PORTABIL",
-      subtitle: "Cooling Solution",
-      description: "Portable fan with humidifier for ultimate comfort.",
-      specs: ["USB Powered", "3 Speeds", "Clip-On", "Quiet"]
+      subtitle: "Soluție de Răcire",
+      description: "hoco. HX614 Spray, portable fan with humidifier, handheld or desktop use, humidification and air cooling, 100 levels of airflow, LED digital display, built-in flashlight 1. Portable handheld or des...",
+      specs: ["Portable handheld or desktop fan with humidifier", "Two technologies: humidification and air cooling", "Transparent 50ml water tank", "100 levels of airflow"]
     },
     {
       product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/03/hoco-gt3-idol-multifunctional-magnetic-card-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
       title: "MAGNETIC",
-      subtitle: "Car Accessory",
-      description: "Magnetic card holder with phone stand functionality.",
-      specs: ["Strong Magnet", "360\u00b0 Rotation", "Leather", "Universal"]
+      subtitle: "Accessory Auto",
+      description: "hoco. GT3, magnetic card holder, 4 cards storage, phone stand, for phones with built-in magnet 1. Portable multifunctional magnetic card holder. 2. Can hold 1 – 4 cards. 3. Can be used as phone sta...",
+      specs: ["Multifunctional magnetic card holder", "Can hold 1 \u2013 4 cards", "Can be used as phone stand", "For phones with built-in magnet"]
     },
     {
       product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/02/hoco-hi37-wifi4-usb-external-wireless-network-card.avif&output=jpg' }], price: 10000, regular_price: 10000 },
       title: "WI-FI",
-      subtitle: "Premium Gadget",
-      description: "Innovative accessory for modern lifestyle.",
-      specs: ["Premium", "Durable", "Modern", "Easy Use"]
+      subtitle: "Gadget Premium",
+      description: "hoco. HI37, Wi-Fi 4 USB adapter, external antenna, 2.4GHz, for desktop computers and laptops 1. Wi-Fi 4 USB adapter. 2. External high gain 3dBi antenna, rotatable through 90 degrees. 3. Main chip: ...",
+      specs: ["Wi-Fi 4 USB adapter", "0 connection", "External antenna", "4GHz stable signal"]
     },
     {
       product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/01/hoco-hw36-magnetic-wireless-charging-car-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
       title: "MAȘINĂ",
-      subtitle: "Fast Charging",
-      description: "High-speed wireless charger for all your devices.",
-      specs: ["15W Fast", "Qi Compatible", "LED Display", "Multi-Device"]
+      subtitle: "Încărcare Rapidă",
+      description: "hoco. HW36, magnetic wireless charging in-car phone holder, 5W / 7.5W / 10W / 15W output, for 4.5 – 7 inches mobile phones, for air outlet 1. In-car magnetic wireless charging phone holder with ele...",
+      specs: ["In-car magnetic wireless charging phone holder", "5W / 7", "5W / 10W / 15W wireless output", "Electric rotation + built-in cooler + front and back lighting"]
     },
     {
       product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2025/09/hoco-ea9-clear-sound-clip-on-tws-bt-headset-mp.jpg&output=jpg' }], price: 10000, regular_price: 10000 },
       title: "TWS",
-      subtitle: "Wireless Audio",
-      description: "Premium wireless earbuds with crystal clear sound quality.",
-      specs: ["Bluetooth 5.3", "30H Battery", "Hi-Fi Sound", "IPX5"]
+      subtitle: "Audio Wireless",
+      description: "EA9 Clear sound, TWS headset, open-ear clip-on design, BT v5.4, charging case battery 300mAh, headset battery 62mAh, total working time – 30 hours 1. BT version: v5.4. Chip: AC7003. 2. Suported pr...",
+      specs: ["True wireless stereo headset", "Open-ear clip-on design", "Total working time: 30 hours"]
     }
   ];
 
@@ -246,7 +246,7 @@ const HeroSlider = ({ products }) => {
                       to="/category/Toate Produsele"
                       className="inline-flex items-center gap-2 sm:gap-3 bg-red-600 hover:bg-red-700 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg mt-4 sm:mt-6 transition-all hover:scale-105 shadow-2xl shadow-red-600/50"
                     >
-                      SHOP NOW <ArrowRight size={24} />
+                      CUMPĂRĂ ACUM <ArrowRight size={24} />
                     </Link>
                   </motion.div>
 
@@ -339,11 +339,11 @@ export default function HomePage() {
     { name: "Power Banks", keywords: ['power bank'], icon: Battery },
     { name: "Audio & Video", keywords: ['headset', 'earphone', 'speaker'], icon: Headphones },
     { name: "Wall Chargers", keywords: ['charger', 'wall'], icon: Zap },
-    { name: "Cables", keywords: ['cable'], icon: Cable },
+    { name: "Cablu", keywords: ['cable'], icon: Cable },
     { name: "Car Accessories", keywords: ['car', 'fm'], icon: Car },
     { name: "Smart Home", keywords: ['smart'], icon: Smartphone },
     { name: "PC Accessories", keywords: ['pen', 'laser'], icon: Laptop },
-    { name: "Wireless Speakers", keywords: ['speaker', 'bluetooth'], icon: Speaker }
+    { name: "Boxe Wireless", keywords: ['speaker', 'bluetooth'], icon: Speaker }
   ].map(cat => ({
     ...cat,
     products: products.filter(p => cat.keywords.some(k => p.name.toLowerCase().includes(k))).slice(0, 4),
@@ -413,7 +413,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========== NEW ARRIVALS ========== */}
+      {/* ========== PRODUSE NOI ========== */}
       <section className="py-20 bg-black text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
@@ -424,7 +424,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <PremiumGoldBadge />
-              <h2 className="text-5xl font-black mb-2 mt-6">NEW ARRIVALS</h2>
+              <h2 className="text-5xl font-black mb-2 mt-6">PRODUSE NOI</h2>
               <p className="text-gray-400 text-xl">Latest products from Hoco</p>
             </div>
             <Link to="/category/Toate Produsele" className="hidden md:flex items-center gap-2 text-red-500 font-bold text-lg hover:underline">
@@ -484,7 +484,7 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: Battery, text: "Up to 30000mAh" },
-                  { icon: Zap, text: "PD 20W Fast Charge" },
+                  { icon: Zap, text: "Încărcare Rapidă PD 20W" },
                   { icon: Shield, text: "Safety Protection" },
                   { icon: Clock, text: "Long Battery Life" }
                 ].map((item, idx) => (
@@ -540,8 +540,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <PremiumGoldBadge />
-            <p className="text-red-500 font-semibold text-lg mb-2 mt-6">PREMIUM AUDIO</p>
-            <h2 className="text-5xl font-black mb-4">CRYSTAL CLEAR SOUND</h2>
+            <p className="text-red-500 font-semibold text-lg mb-2 mt-6">AUDIO PREMIUM</p>
+            <h2 className="text-5xl font-black mb-4">SUNET CRISTALIN</h2>
             <p className="text-gray-400 text-xl max-w-2xl mx-auto">Experience superior audio quality with our wireless earbuds and headsets</p>
           </div>
 
@@ -579,10 +579,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Zap, title: "Fast Charging", desc: "Latest PD & QC technology", color: "bg-red-600" },
+              { icon: Zap, title: "Încărcare Rapidă", desc: "Tehnologie PD & QC de ultimă generație", color: "bg-red-600" },
               { icon: Shield, title: "Quality Assured", desc: "Premium materials", color: "bg-black" },
               { icon: Award, title: "Official Partner", desc: "100% authentic products", color: "bg-red-600" },
-              { icon: Clock, title: "24/7 Support", desc: "Always here for you", color: "bg-black" }
+              { icon: Clock, title: "24/7 Suport", desc: "Always here for you", color: "bg-black" }
             ].map((item, idx) => (
               <motion.div
                 key={idx}

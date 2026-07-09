@@ -5,97 +5,97 @@ import { ArrowRight, Calendar, ChevronRight, Clock, Tag } from "lucide-react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
-// Datele evenimentelor de pe hocotech.com
+// Datele evenimentelor de pe hocotech.com - TRADUSE
 const eventsData = [
   {
     id: 1,
-    title: "HOCO.GAMING Official Launch",
+    title: "Lansare Oficială HOCO.GAMING",
     date: "21/04/2026",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2026/04/hoco-gaming-official-launch-banner.jpg",
-    excerpt: "Official launch of HOCO.GAMING - premium gaming accessories line",
-    content: "We are excited to announce the official launch of HOCO.GAMING, our new line of premium gaming accessories designed for professional gamers and enthusiasts."
+    excerpt: "Lansarea oficială HOCO.GAMING - linia premium de accesorii de gaming",
+    content: "Suntem încântați să anunțăm lansarea oficială a HOCO.GAMING, noua noastră linie de accesorii de gaming premium concepută pentru gameri profesioniști și pasionați."
   },
   {
     id: 2,
-    title: "hoco. × Hong Kong Exhibition 2025 / October /",
+    title: "hoco. × Expoziția Hong Kong 2025 / Octombrie /",
     date: "29/09/2025",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2025/09/hoco-news-hk-exhibition-october-2025-banner.jpg",
-    excerpt: "Join us at Hong Kong Exhibition October 2025",
-    content: "Visit our booth at the Hong Kong Exhibition to discover our latest products and innovations."
+    excerpt: "Vă așteptăm la Expoziția Hong Kong Octombrie 2025",
+    content: "Vizitați standul nostru la Expoziția Hong Kong pentru a descoperi cele mai noi produse și inovații ale noastre."
   },
   {
     id: 3,
-    title: "hoco. × Germany IFA Exhibition 2025",
+    title: "hoco. × Expoziția IFA Germania 2025",
     date: "05/09/2025",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2025/09/hoco-news-ifa-exhibition-germany-2025-banner.jpg",
-    excerpt: "IFA 2025 - Berlin, Germany",
-    content: "Hoco will be present at IFA 2025 in Berlin, showcasing our latest mobile accessories and smart home solutions."
+    excerpt: "IFA 2025 - Berlin, Germania",
+    content: "Hoco va fi prezent la IFA 2025 în Berlin, prezentând cele mai noi accesorii mobile și soluții smart home."
   },
   {
     id: 4,
-    title: "hoco. at Shenzhen International Gift Show",
+    title: "hoco. la Târgul Internațional de Cadouri Shenzhen",
     date: "25/04/2025",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2025/04/hoco-news-shenzhen-international-gift-show-2025-banner.jpg",
-    excerpt: "Shenzhen International Gift Show 2025",
-    content: "Discover Hoco's premium accessories at the Shenzhen International Gift Show."
+    excerpt: "Târgul Internațional de Cadouri Shenzhen 2025",
+    content: "Descoperiți accesoriile premium Hoco la Târgul Internațional de Cadouri Shenzhen."
   },
   {
     id: 5,
-    title: "hoco. at Hong Kong Exhibition 2025",
+    title: "hoco. la Expoziția Hong Kong 2025",
     date: "18/04/2025",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2025/04/hoco-news-hong-kong-exhibition-2025-banner.jpg",
-    excerpt: "Hong Kong Exhibition April 2025",
-    content: "Join us at Hong Kong Exhibition to explore our newest product lineup."
+    excerpt: "Expoziția Hong Kong Aprilie 2025",
+    content: "Alăturați-vă nouă la Expoziția Hong Kong pentru a explora cea mai nouă gamă de produse."
   },
   {
     id: 6,
-    title: "hoco. Landing Las Vegas CES Show",
+    title: "hoco. Prezent la Târgul CES Las Vegas",
     date: "07/01/2025",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2025/01/hoco-news-las-vegas-ces-show-2025-banner.jpg",
     excerpt: "CES 2025 - Las Vegas",
-    content: "Hoco makes its mark at CES 2025 in Las Vegas, presenting cutting-edge mobile technology."
+    content: "Hoco își face apariția la CES 2025 în Las Vegas, prezentând tehnologie mobilă de ultimă generație."
   },
   {
     id: 7,
-    title: "hoco. Guangzhou Showroom Upgrade",
+    title: "hoco. Showroom Modernizat Guangzhou",
     date: "10/12/2024",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2024/12/hoco-news-guangzhou-showroom-upgrade-banner.jpg",
-    excerpt: "New upgraded showroom in Guangzhou",
-    content: "We are proud to announce the upgrade of our Guangzhou showroom with an enhanced customer experience."
+    excerpt: "Showroom nou modernizat în Guangzhou",
+    content: "Suntem mândri să anunțăm modernizarea showroom-ului nostru din Guangzhou cu o experiență îmbunătățită pentru clienți."
   },
   {
     id: 8,
-    title: "hoco. × Germany IFA Exhibition 2024",
+    title: "hoco. × Expoziția IFA Germania 2024",
     date: "06/09/2024",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2024/09/hoco-germany-ifa-exhibition-invites-banner.jpg",
     excerpt: "IFA 2024 - Berlin",
-    content: "Hoco at IFA 2024 - Discover our innovations in mobile accessories."
+    content: "Hoco la IFA 2024 - Descoperiți inovațiile noastre în accesorii mobile."
   },
   {
     id: 9,
-    title: "hoco. 15th Anniversary Celebration",
+    title: "hoco. Aniversare 15 Ani",
     date: "26/01/2024",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2024/01/hoco-news-15th-anniversary-celebration-banner-en.jpg",
-    excerpt: "Celebrating 15 years of excellence",
-    content: "Hoco celebrates 15 years of providing premium mobile accessories worldwide."
+    excerpt: "Celebrăm 15 ani de excelență",
+    content: "Hoco sărbătorește 15 ani de furnizare de accesorii mobile premium în întreaga lume."
   },
   {
     id: 10,
-    title: "hoco. Malaysia Grand Opening",
+    title: "hoco. Deschidere Oficială Malaezia",
     date: "05/01/2024",
-    category: "Events",
+    category: "Evenimente",
     image: "https://hocotech.com/wp-content/uploads/2024/01/hoco-news-malaysia-grand-opening-banner.jpg",
-    excerpt: "Grand opening in Malaysia",
-    content: "Hoco expands to Malaysia with a grand opening event."
+    excerpt: "Deschidere oficială în Malaezia",
+    content: "Hoco se extinde în Malaezia cu un eveniment de deschidere oficială."
   }
 ];
 
@@ -107,8 +107,8 @@ const NewsCard = ({ event, index }) => (
     className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-red-600"
   >
     <div className="aspect-video overflow-hidden bg-gray-100 relative">
-      <img 
-        src={event.image} 
+      <img
+        src={event.image}
         alt={event.title}
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         onError={(e) => {
@@ -119,7 +119,7 @@ const NewsCard = ({ event, index }) => (
         {event.category}
       </div>
     </div>
-    
+
     <div className="p-6">
       <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
         <div className="flex items-center gap-2">
@@ -131,42 +131,42 @@ const NewsCard = ({ event, index }) => (
           <span>{event.category}</span>
         </div>
       </div>
-      
+
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
         {event.title}
       </h3>
-      
+
       <p className="text-gray-600 mb-4 line-clamp-2">{event.excerpt}</p>
-      
+
       <button className="inline-flex items-center gap-2 text-red-600 font-bold hover:underline">
-        READ MORE <ArrowRight size={18} />
+        CITEȘTE MAI MULT <ArrowRight size={18} />
       </button>
     </div>
   </motion.div>
 );
 
 export default function NewsPage() {
-  const [filter, setFilter] = useState("All");
-  
-  const categories = ["All", ...new Set(eventsData.map(e => e.category))];
-  const filteredEvents = filter === "All" 
-    ? eventsData 
+  const [filter, setFilter] = useState("Toate");
+
+  const categories = ["Toate", ...new Set(eventsData.map(e => e.category))];
+  const filteredEvents = filter === "Toate"
+    ? eventsData
     : eventsData.filter(e => e.category === filter);
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="bg-black text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-red-600/30 to-transparent"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-4">NEWS & EVENTS</h1>
+          <h1 className="text-5xl md:text-7xl font-black mb-4">ȘTIRI ȘI EVENIMENTE</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Stay updated with the latest from Hoco Romania - Official Partner
+            Rămâi la curent cu cele mai noi informații de la Hoco România - Partener Oficial
           </p>
         </div>
       </section>
@@ -180,8 +180,8 @@ export default function NewsPage() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-3 rounded-full font-bold transition-all ${
-                  filter === cat 
-                    ? 'bg-red-600 text-white shadow-lg' 
+                  filter === cat
+                    ? 'bg-red-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-200'
                 }`}
               >
@@ -206,16 +206,16 @@ export default function NewsPage() {
       {/* Official Partner Section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-black mb-6">OFFICIAL PARTNER</h2>
+          <h2 className="text-4xl font-black mb-6">PARTENER OFICIAL</h2>
           <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-            Hoco Romania is an official partner of Hoco.tech, bringing you the latest 
-            innovations and premium mobile accessories directly from the source.
+            Hoco România este partener oficial al Hoco.tech, aducându-vă cele mai noi
+            inovații și accesorii mobile premium direct de la sursă.
           </p>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all"
           >
-            EXPLORE PRODUCTS <ArrowRight size={24} />
+            EXPLOREAZĂ PRODUSELE <ArrowRight size={24} />
           </Link>
         </div>
       </section>
