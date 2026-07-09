@@ -117,39 +117,39 @@ const HeroSlider = ({ products }) => {
 
   const slides = [
     {
-      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/04/hoco-hx614-spray-series-ice-cooling-handheld-fan.avif&output=jpg' }], price: 10000, regular_price: 10000 },
-      title: "PORTABIL",
-      subtitle: "Soluție de Răcire",
-      description: "hoco. HX614 Spray, portable fan with humidifier, handheld or desktop use, humidification and air cooling, 100 levels of airflow, LED digital display, built-in flashlight 1. Portable handheld or des...",
-      specs: ["Portable handheld or desktop fan with humidifier", "Two technologies: humidification and air cooling", "Transparent 50ml water tank", "100 levels of airflow"]
-    },
-    {
-      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/03/hoco-gt3-idol-multifunctional-magnetic-card-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
-      title: "MAGNETIC",
-      subtitle: "Accessory Auto",
-      description: "hoco. GT3, magnetic card holder, 4 cards storage, phone stand, for phones with built-in magnet 1. Portable multifunctional magnetic card holder. 2. Can hold 1 – 4 cards. 3. Can be used as phone sta...",
-      specs: ["Multifunctional magnetic card holder", "Can hold 1 \u2013 4 cards", "Can be used as phone stand", "For phones with built-in magnet"]
-    },
-    {
-      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/02/hoco-hi37-wifi4-usb-external-wireless-network-card.avif&output=jpg' }], price: 10000, regular_price: 10000 },
-      title: "WI-FI",
-      subtitle: "Gadget Premium",
-      description: "hoco. HI37, Wi-Fi 4 USB adapter, external antenna, 2.4GHz, for desktop computers and laptops 1. Wi-Fi 4 USB adapter. 2. External high gain 3dBi antenna, rotatable through 90 degrees. 3. Main chip: ...",
-      specs: ["Wi-Fi 4 USB adapter", "0 connection", "External antenna", "4GHz stable signal"]
-    },
-    {
-      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/01/hoco-hw36-magnetic-wireless-charging-car-holder.avif&output=jpg' }], price: 10000, regular_price: 10000 },
-      title: "MAȘINĂ",
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/04/hoco-j160a-original-pd20w-magnetic-power-bank-10k-mah.avif&output=jpg' }], price: 199, regular_price: 249 },
+      title: "Power Bank 10000mAh",
       subtitle: "Încărcare Rapidă",
-      description: "hoco. HW36, magnetic wireless charging in-car phone holder, 5W / 7.5W / 10W / 15W output, for 4.5 – 7 inches mobile phones, for air outlet 1. In-car magnetic wireless charging phone holder with ele...",
-      specs: ["In-car magnetic wireless charging phone holder", "5W / 7", "5W / 10W / 15W wireless output", "Electric rotation + built-in cooler + front and back lighting"]
+      description: "Baterie externă compactă cu încărcare magnetică wireless. Perfectă pentru călătorii și utilizare zilnică.",
+      specs: ["Capacitate 10000mAh", "Încărcare Rapidă PD 20W", "Compatibil Qi", "Afișaj LED"]
     },
     {
-      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2025/09/hoco-ea9-clear-sound-clip-on-tws-bt-headset-mp.jpg&output=jpg' }], price: 10000, regular_price: 10000 },
-      title: "TWS",
-      subtitle: "Audio Wireless",
-      description: "EA9 Clear sound, TWS headset, open-ear clip-on design, BT v5.4, charging case battery 300mAh, headset battery 62mAh, total working time – 30 hours 1. BT version: v5.4. Chip: AC7003. 2. Suported pr...",
-      specs: ["True wireless stereo headset", "Open-ear clip-on design", "Total working time: 30 hours"]
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/02/hoco-hi37-wifi4-usb-external-wireless-network-card.avif&output=jpg' }], price: 89, regular_price: 119 },
+      title: "Adaptor Wi-Fi USB",
+      subtitle: "Conexiune Stabilă",
+      description: "Adaptor Wi-Fi 4 cu antenă externă pentru semnal puternic. Compatibil cu desktop și laptop.",
+      specs: ["Wi-Fi 4 2.4GHz", "Antenă externă 3dBi", "Compatibil Windows", "Instalare ușoară"]
+    },
+    {
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2025/09/hoco-ea9-clear-sound-clip-on-tws-bt-headset-mp.jpg&output=jpg' }], price: 149, regular_price: 199 },
+      title: "Căști TWS Open-Ear",
+      subtitle: "Sunet Clar",
+      description: "Căști wireless cu design clip-on confortabil. Autonomie 30 ore cu carcasa de încărcare.",
+      specs: ["Bluetooth 5.4", "Autonomie 30 ore", "Design Open-Ear", "Carcasă 300mAh"]
+    },
+    {
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/01/hoco-hw36-magnetic-wireless-charging-car-holder.avif&output=jpg' }], price: 179, regular_price: 229 },
+      title: "Suport Auto Magnetic",
+      subtitle: "Încărcare Wireless",
+      description: "Suport auto cu încărcare wireless și răcire integrată. Rotație electrică și iluminare.",
+      specs: ["Încărcare 15W", "Rotație electrică", "Răcire integrată", "Iluminare LED"]
+    },
+    {
+      product: { images: [{ src: 'https://images.weserv.nl/?url=https://hocotech.com/wp-content/uploads/2026/03/hoco-gt3-idol-multifunctional-magnetic-card-holder.avif&output=jpg' }], price: 59, regular_price: 79 },
+      title: "Suport Carduri Magnetic",
+      subtitle: "4 Carduri + Suport",
+      description: "Suport magnetic pentru carduri cu funcție de suport telefon. Design elegant și practic.",
+      specs: ["Stocare 4 carduri", "Funcție suport", "Magnet puternic", "Design premium"]
     }
   ];
 
